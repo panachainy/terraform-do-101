@@ -8,3 +8,8 @@ Main commands:
   apply         Create or update infrastructure
   destroy       Destroy previously-created infrastructure
 ```
+
+## Prerequisites
+
+- use `DIGITALOCEAN_ACCESS_TOKEN` to connect digital ocean
+- run `terraform init` when first time
