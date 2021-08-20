@@ -14,8 +14,9 @@ Main commands:
 - use `DIGITALOCEAN_ACCESS_TOKEN` to connect digital ocean
 - run `terraform init` when first time
 
-## Run
+## Plan & Apply
 
 ```sh
 terraform plan -var-file="dev.tfvars"
+terraform apply -var-file="dev.tfvars"
 ```
