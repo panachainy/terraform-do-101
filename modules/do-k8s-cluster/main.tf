@@ -10,13 +10,13 @@ resource "random_pet" "node" {
 # }
 
 resource "digitalocean_kubernetes_cluster" "k8s" {
-  name = "k8s-${var.env}"
-  region = var.region
+  name    = "k8s-${var.env}"
+  region  = var.region
   version = data.digitalocean_kubernetes_versions.k8s_versions.latest_version
 
   node_pool {
-    name       = "${var.env}-${random_pet.node.id}-node-pool"
-    size       = var.node_size
+    name = "${var.env}-${random_pet.node.id}-node-pool"
+    size = var.node_size
 
     ## Static node pool
     node_count = var.node_count
