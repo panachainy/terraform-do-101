@@ -13,6 +13,11 @@ variable "env" {
     description = "Environtment env"
 }
 
+variable "domain" {
+    type = string
+    description = "Domain Name"
+}
+
 variable "node_size" {
     default = "s-2vcpu-4gb"
     description = "Droplet instance Size"
@@ -20,9 +25,4 @@ variable "node_size" {
 
 variable "node_count" {
     description = "Droplet instance Size"
-}
-
-variable "domain" {
-    type = string
-    description = "Domain Name"
 }

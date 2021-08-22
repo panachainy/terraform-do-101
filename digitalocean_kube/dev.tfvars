@@ -1,0 +1,7 @@
+do_token = ""
+project_name = "k8s-dev"
+env = "dev"
+domain = ""
+node_count = "1"
+# node_size = "s-2vcpu-4gb"
+node_size = "s-1vcpu-2gb"
