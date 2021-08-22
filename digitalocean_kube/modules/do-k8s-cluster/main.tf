@@ -14,15 +14,16 @@ resource "digitalocean_kubernetes_cluster" "k8s" {
   region = var.region
   version = data.digitalocean_kubernetes_versions.k8s_versions.latest_version
 
-  maintenance_policy {
-    start_time  = "04:00"
-    day         = "sunday"
-  }
-
   node_pool {
     name       = "${var.env}-${random_pet.node.id}-node-pool"
     size       = var.node_size
+
+    ## Static node pool
     node_count = var.node_count
+
+    ## Auto scale node pool
+    # min_nodes  = 1
+    # max_nodes  = 5
   }
 }
 
