@@ -20,3 +20,7 @@ Main commands:
 terraform plan -var-file="dev.tfvars"
 terraform apply -var-file="dev.tfvars"
 ```
+
+## Custom Plugin kong
+
+https://github.com/revomatico/docker-kong-oidc
